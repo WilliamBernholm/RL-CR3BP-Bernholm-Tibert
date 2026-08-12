@@ -1,0 +1,50 @@
+{
+  "label": "TLI-3",
+  "agent": "tli",
+  "config": "configs/archived_txt/PPOA_2026-05-22_08-51-37_run_config_Entropy.txt",
+  "stage_index": 0,
+  "stage_name": "ppo_a_stage_1_staged_tli_tiny_noise",
+  "grid": [
+    3000,
+    2000
+  ],
+  "extent": [
+    -0.25,
+    1.15,
+    -0.5,
+    0.5
+  ],
+  "panels": {
+    "pre_flyby_with_invalid": {
+      "phase": "pre",
+      "invalid_penalty_included": true,
+      "reward_min": -150.0,
+      "reward_max": 40.0,
+      "reward_mean": -2.331292965999488,
+      "negative_fraction": 0.6805636666666667,
+      "wall_s": 0.4
+    },
+    "post_flyby": {
+      "phase": "post",
+      "invalid_penalty_included": false,
+      "reward_min": -90.0,
+      "reward_max": 160.0,
+      "reward_mean": 11.93426299583768,
+      "negative_fraction": 0.000485,
+      "wall_s": 0.4
+    }
+  },
+  "earth_pos": [
+    -0.012150585609624,
+    0.0
+  ],
+  "moon_pos": [
+    0.987849414390376,
+    0.0
+  ],
+  "npz_decimation_stride": 2,
+  "npz_grid": [
+    1500,
+    1000
+  ]
+}

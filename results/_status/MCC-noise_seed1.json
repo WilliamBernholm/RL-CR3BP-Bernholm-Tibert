@@ -1,0 +1,1 @@
+{"tag": "MCC-noise_seed1", "pid": 903475, "step": 602112, "target_step": 602112, "started_at": 1786105710.374516, "updated_at": 1786110423.851816, "eval_reward": 5.601662, "eval_sr": 0.25, "extra": {"n_evals": "147", "mean_dv": 0.028187}}

@@ -1,0 +1,32 @@
+{
+  "n_theta": 100,
+  "n_dv": 70,
+  "n_candidates": 7000,
+  "n_success": 9,
+  "success_fraction": 0.0012857142857142856,
+  "theta_range_rad": [
+    0.0,
+    6.283185307179586
+  ],
+  "dv_range_kms": [
+    2.9,
+    3.3
+  ],
+  "min_lunar_distance_nd": 0.004175574717560246,
+  "min_lunar_distance_km": 1605.0909214301587,
+  "wall_s": 160.4,
+  "region_code_deg": null,
+  "phi_range_deg": [
+    0.0,
+    360.0
+  ],
+  "archive_comparison": {
+    "status": "compared",
+    "cells": 7000,
+    "success_cells_archived": 15,
+    "success_cells_regenerated": 9,
+    "success_disagreements": 6,
+    "success_agreement": 0.9991428571428571,
+    "moon_map_max_abs_delta_nd": 0.5674147000137585
+  }
+}

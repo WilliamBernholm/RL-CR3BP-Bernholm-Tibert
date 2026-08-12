@@ -1,0 +1,76 @@
+{
+  "meta": {
+    "label": "MCC-4",
+    "agent": "mcc",
+    "arm": "none",
+    "trainer_mode": "ppo_b_library",
+    "source_txt": "configs/archived_txt/PPOB_2026-05-15_20-37-20_run_config.txt",
+    "source_sha256": "918a81200533dbff5622e91e4de3f4caed95623b5a130404eb6bf706863776ff",
+    "effective_total_steps": 602112,
+    "cr3bp_Lstar_km": 384400.0,
+    "cr3bp_Tstar_s": 375200.0,
+    "mu": 0.012150585609624,
+    "dv_scale": 0.02928199791883455,
+    "rp_min": 0.0143,
+    "rp_max": 0.06,
+    "r_moon_flyby": 0.06,
+    "r_earth_impact": 0.014,
+    "r_moon_impact": 0.0045,
+    "r_earth_return": 0.05,
+    "r_escape": 2.0,
+    "drift_min_minutes_pre_tli": 0.08333333333333333,
+    "drift_max_minutes_pre_tli": 1.0,
+    "drift_min_minutes_post_tli": 10.0,
+    "drift_max_minutes_post_tli": 3000.0,
+    "lstm_enabled": true,
+    "tau_action_enabled": true,
+    "time_aware_discount_enabled": true,
+    "fixed_drift_minutes": null,
+    "LU_km": 384400.0,
+    "TU_seconds": 375200.0,
+    "VU_kms": 1.0245202558635393
+  },
+  "n_snapshots": 147,
+  "step_range": [
+    4096,
+    602112
+  ],
+  "actions_npz_bytes": 96982,
+  "trajectories": {
+    "first_success": {
+      "step": 303104,
+      "file": "first_success_step000303104.npz",
+      "bytes": 194652
+    },
+    "best": {
+      "step": 602112,
+      "file": "best_step000602112.npz",
+      "bytes": 194480
+    },
+    "final": {
+      "step": 602112,
+      "file": "final_step000602112.npz",
+      "bytes": 194480
+    },
+    "failure": {
+      "step": 589824,
+      "file": "failure_step000589824.npz",
+      "bytes": 207063
+    }
+  },
+  "policies": {
+    "BEST": "policy_BEST_Model__stage03_step00602112_R64.42_SR1.000_LD0.02875_CM0.00000__2026-08-07_15-40-21.zip",
+    "FINAL": "policy_FINAL_PPOB__model_final__2026-08-07_15-40-24.zip"
+  },
+  "n_evals": 288,
+  "metrics_source": "eval_metrics.csv",
+  "eval_metrics_csv": "eval_metrics.csv",
+  "final_training_plots": [
+    "final_free_return_rates.png",
+    "final_mean_eval_dv.png",
+    "final_mean_eval_reward.png",
+    "final_ppo_metrics.png",
+    "final_training_curves.npz"
+  ],
+  "final_true5_rate": 1.0
+}

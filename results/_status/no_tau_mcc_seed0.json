@@ -1,0 +1,1 @@
+{"tag": "no_tau_mcc_seed0", "pid": 882651, "step": 602112, "target_step": 602112, "started_at": 1786094843.364695, "updated_at": 1786099985.4904084, "eval_reward": -66.044307, "eval_sr": 0.0, "extra": {"n_evals": "147", "mean_dv": 0.031368}}

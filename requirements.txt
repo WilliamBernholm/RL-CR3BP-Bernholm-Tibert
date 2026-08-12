@@ -1,0 +1,41 @@
+# Versions are the ones this package was developed and validated against, and they
+# match the target machine ("kraken") exactly -- see requirements_kraken.txt, a
+# pip freeze taken from it on 2026-08-05.
+#
+# Pinned rather than floated: the LSTM policy subclasses sb3-contrib internals, so
+# stable-baselines3 and sb3-contrib must match EACH OTHER exactly (both 2.7.1). A
+# mismatch there fails at model-build time, not import time -- it would survive
+# preflight and die partway through the smoke run.
+#
+#   python -m venv .venv && . .venv/bin/activate
+#   pip install -r requirements.txt
+#
+# ON KRAKEN, only two of these are missing from the existing conda environment:
+#
+#   pip install scipy pytest
+#
+#   scipy   DOP853 + differential_evolution -> needed by src/eval/de_reference.py
+#           and src/eval/integration_validation.py
+#   pytest  needed by `make preflight`
+#
+# TRAINING NEEDS NEITHER. If installing is awkward, the 57-run queue can start
+# without them; only the gates and two evaluation stages are affected.
+#
+# CPU torch is deliberate. Every environment is stepped sequentially on one core and
+# the queue runs 56 of them side by side, so a GPU buys nothing here and CUDA wheels
+# are a large download for no benefit.
+
+torch==2.10.0
+numpy==2.2.6
+scipy==1.15.3
+numba==0.66.0
+
+stable-baselines3==2.7.1
+sb3-contrib==2.7.1
+gymnasium==1.2.3
+cloudpickle==3.1.2
+
+PyYAML==6.0.3
+matplotlib==3.10.8
+
+pytest==9.1.1

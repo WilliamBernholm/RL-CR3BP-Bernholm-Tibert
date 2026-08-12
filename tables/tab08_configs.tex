@@ -1,0 +1,88 @@
+\begin{table*}[t]
+\centering
+\caption{Training configurations. Each agent's parent (headline) run is listed in full; branch tables list only what changed (``---'' = unchanged). Stage-wise values are 1/2/3. Successful evals is the fraction of \emph{all} evaluations in the run that met the five-condition criterion, given per seed as 1000 / 0 / 1. It is taken over the whole run rather than a final window, so a configuration that reached a free return and later drifted off it is not reported as zero while a trajectory from that same run is shown elsewhere. It counts training-time evaluations on the single deterministic trained scenario, and is therefore neither the rescored clean-checkpoint count of Table~\ref{tab:ablation} nor an episode success probability under dispersed initial conditions, for which see Tables~\ref{tab:tli_sensitivity} and~\ref{tab:mcc_sensitivity}.}
+\label{tab:configs}
+\footnotesize
+\begin{minipage}[t]{0.48\textwidth}
+\centering
+\begin{tabular}{@{}ll@{}}
+\multicolumn{2}{@{}l}{\textit{Parent: TLI-3 (PPOA\_2026-05-22\_08-51-37\_Entropy)}}\\
+\toprule
+$\gamma$ / $\lambda_{\mathrm{GAE}}$ & 0.997 / 0.95\\
+Learning rate & $10^{-4}$\\
+Batch, rollout & 256, 256\\
+PPO epochs & 8\\
+Clip range, max grad & 0.15, 0.5\\
+Environments & 8\\
+Phase angle $\phi$ & 4.04056\\
+$w_{\mathrm{flyby}}$ & 40\\
+$w_{\mathrm{return}}$ & 160\\
+$w_{\Delta v}$ & 0.2\\
+$w_{\mathrm{budget}}$ & 80\\
+$w_{\mathrm{escape}}$ & 12\\
+$w_{\mathrm{postflyby}}$ (1/2/3) & 90/100/140\\
+$w_{\mathrm{invalid}}$ (1/2/3) & 10/10/25\\
+$w_{\mathrm{earth}}$, $w_{\mathrm{moon}}$ & 150, 5\\
+Entropy (1/2/3) & 0.005/0.004/0.002\\
+Steps (1/2/3) & 399/201/201k\\
+$\sigma_{\Delta v}$ & 0\\
+\textbf{Successful evals} & \textbf{0.12 / 0.07 / 0.08}\\
+\bottomrule
+\end{tabular}
+\end{minipage}
+\hfill
+\begin{minipage}[t]{0.48\textwidth}
+\centering
+\begin{tabular}{@{}ll@{}}
+\multicolumn{2}{@{}l}{\textit{Parent: MCC-2 (PPOB\_2026-05-08\_10-56-47)}}\\
+\toprule
+$\gamma$ / $\lambda_{\mathrm{GAE}}$ & 0.997 / 0.95\\
+Learning rate & $10^{-4}$\\
+Batch, rollout & 256, 256\\
+PPO epochs & 8\\
+Clip range, max grad & 0.15, 0.5\\
+Environments & 8\\
+Trajectory index & 65\\
+$w_{\mathrm{flyby}}$ & 10\\
+$w_{\mathrm{return}}$ & 100\\
+$w_{\Delta v}$ (1/2/3) & 12/13/15\\
+$w_{\mathrm{budget}}$ & 40\\
+$w_{\mathrm{escape}}$ & 60\\
+$w_{\mathrm{postflyby}}$ & 50\\
+$w_{\mathrm{invalid}}$ & 60\\
+$w_{\mathrm{earth}}$, $w_{\mathrm{moon}}$ & 150, 20\\
+Entropy (1/2/3) & 0.009/0.006/0.001\\
+Steps (1/2/3) & 201/201/201k\\
+\textbf{Successful evals} & \textbf{0.93 / 0.84 / 0.92}\\
+\bottomrule
+\end{tabular}
+\end{minipage}
+
+\vspace{10pt}
+
+\begin{tabular*}{\textwidth}{@{\extracolsep{\fill}}lccccccc@{}}
+\multicolumn{8}{@{}l}{\textit{PPO-TLI branches (changes from TLI-3)}}\\
+\toprule
+Run & $w_{\mathrm{flyby}}$ & $w_{\mathrm{postflyby}}$ (1/2/3) & Entropy (1/2/3) & Steps (1/2/3) & $\sigma_{\Delta v}$ & $\phi$ & Successful evals\\
+\midrule
+TLI-1 & 140 & 50/60/70 & 0.004/0.003/0.002 & 100/59/500k & --- & --- & 0.04 / 0.00 / 0.01\\
+TLI-2 & 140 & --- & 0.004/0.003/0.002 & 299/100/100k & --- & --- & 0.00 / 0.00 / 0.00\\
+TLI-4 & 2 & --- & --- & --- & --- & 3.95 & 0.02 / 0.01 / 0.01\\
+\bottomrule
+\end{tabular*}
+
+\vspace{6pt}
+
+\begin{tabular*}{\textwidth}{@{\extracolsep{\fill}}lccccc@{}}
+\multicolumn{6}{@{}l}{\textit{PPO-MCC branches (changes from MCC-2)}}\\
+\toprule
+Run & $w_{\Delta v}$ (1/2/3) & $w_{\mathrm{postflyby}}$ & Steps (1/2/3) & Trajectory index & Successful evals\\
+\midrule
+MCC-1 & 5.8564/7.3205/8.7846 & --- & --- & --- & 0.76 / 0.76 / 0.88\\
+MCC-3 & 25/30/35 & --- & --- & --- & 0.57 / 0.81 / 0.71\\
+MCC-4 & 30/40/50 & --- & --- & --- & 0.00 / 0.07 / 0.10\\
+MCC-5 & 30/40/50 & --- & 401/100/100k & --- & 0.33 / 0.45 / 0.51\\
+MCC-6 & 25/30/35 & 70 & 201/100/100k & Lunar\_inpact\_30min\_2026-05-23\_15-57-28 & 0.18 / 0.15 / 0.08\\
+\bottomrule
+\end{tabular*}
+\end{table*}

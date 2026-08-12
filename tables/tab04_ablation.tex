@@ -1,0 +1,32 @@
+\begin{table}[hbt!]
+\centering
+\caption{Ablation of the method components and fixed-drift sweep, scored by the frozen five-condition criterion. Per-seed values are given for seeds 1000, 0 and 1, out of 196 evaluated checkpoints for PPO-TLI and 148 for PPO-MCC. Sweep rows are no-$\tau$ runs at the stated constant drift, single seed.}
+\label{tab:ablation}
+\footnotesize
+\begin{tabular}{llcc}
+\toprule
+Agent & Configuration & Clean checkpoints & Final-window rate\\
+\midrule
+PPO-TLI & Full method & \phantom{0}25 / \phantom{0}14 / \phantom{0}19 & 0.15 / 0.05 / 0.18\\
+ & No LSTM & \phantom{0}18 / \phantom{0}18 / \phantom{0}18 & 0.08 / 0.00 / 0.05\\
+ & No time-aware discount & \phantom{0}29 / \phantom{0}24 / \phantom{0}28 & 0.23 / 0.15 / 0.15\\
+ & No learned timing ($\tau$) & \phantom{00}2 / \phantom{00}0 / \phantom{00}0 & 0.00 / 0.00 / 0.00\\
+\cmidrule(l){2-4}
+ & \quad constant drift 0.083~min & \phantom{00}0 & 0.00\\
+ & \quad constant drift 0.2~min & \phantom{00}2 & 0.00\\
+ & \quad constant drift 0.65~min & \phantom{00}0 & 0.00\\
+ & \quad constant drift 0.7~min & \phantom{00}9 & 0.00\\
+ & \quad constant drift 1.0~min & \phantom{0}24 & 0.13\\
+\midrule
+PPO-MCC & Full method & 124 / 112 / 123 & 1.00 / 1.00 / 1.00\\
+ & No LSTM & 123 / 123 / 123 & 1.00 / 1.00 / 1.00\\
+ & No time-aware discount & \phantom{00}0 / \phantom{00}0 / \phantom{00}0 & 0.00 / 0.00 / 0.00\\
+ & No learned timing ($\tau$) & \phantom{00}0 / \phantom{00}0 / \phantom{00}0 & 0.00 / 0.00 / 0.00\\
+\cmidrule(l){2-4}
+ & \quad constant drift 10~min & \phantom{00}0 & 0.00\\
+ & \quad constant drift 60~min & \phantom{00}0 & 0.00\\
+ & \quad constant drift 1000~min & \phantom{00}0 & 0.00\\
+ & \quad constant drift 3000~min & 130 & 1.00\\
+\bottomrule
+\end{tabular}
+\end{table}

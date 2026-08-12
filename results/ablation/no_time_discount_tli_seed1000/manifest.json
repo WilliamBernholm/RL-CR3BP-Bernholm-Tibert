@@ -1,0 +1,76 @@
+{
+  "meta": {
+    "label": "no_time_discount_tli",
+    "agent": "tli",
+    "arm": "no_time_discount",
+    "trainer_mode": "ppo_a",
+    "source_txt": "configs/archived_txt/PPOA_2026-05-22_08-51-37_run_config_Entropy.txt",
+    "source_sha256": "c3bf22362acb82d299ed2410eac25179e7851078f05011425a72c1c267feabc8",
+    "effective_total_steps": 800768,
+    "cr3bp_Lstar_km": 384400.0,
+    "cr3bp_Tstar_s": 375200.0,
+    "mu": 0.012150585609624,
+    "dv_scale": 1.0,
+    "rp_min": 0.0143,
+    "rp_max": 0.06,
+    "r_moon_flyby": 0.06,
+    "r_earth_impact": 0.014,
+    "r_moon_impact": 0.0045,
+    "r_earth_return": 0.05,
+    "r_escape": 2.0,
+    "drift_min_minutes_pre_tli": 0.08333333333333333,
+    "drift_max_minutes_pre_tli": 1.0,
+    "drift_min_minutes_post_tli": 10.0,
+    "drift_max_minutes_post_tli": 3000.0,
+    "lstm_enabled": true,
+    "tau_action_enabled": true,
+    "time_aware_discount_enabled": false,
+    "fixed_drift_minutes": null,
+    "LU_km": 384400.0,
+    "TU_seconds": 375200.0,
+    "VU_kms": 1.0245202558635393
+  },
+  "n_snapshots": 195,
+  "step_range": [
+    4096,
+    798720
+  ],
+  "actions_npz_bytes": 124403,
+  "trajectories": {
+    "first_success": {
+      "step": 229376,
+      "file": "first_success_step000229376.npz",
+      "bytes": 453578
+    },
+    "best": {
+      "step": 790528,
+      "file": "best_step000790528.npz",
+      "bytes": 452809
+    },
+    "final": {
+      "step": 790528,
+      "file": "final_step000790528.npz",
+      "bytes": 452809
+    },
+    "failure": {
+      "step": 790528,
+      "file": "failure_step000790528.npz",
+      "bytes": 452809
+    }
+  },
+  "policies": {
+    "BEST": "policy_BEST_Model__stage03_step00790528_R139.38_SR1.000_LD0.00812_CM0.00000__2026-08-07_12-32-18.zip",
+    "FINAL": "policy_FINAL_PPOA__model_final__2026-08-07_12-33-08.zip"
+  },
+  "n_evals": 195,
+  "metrics_source": "eval_metrics.csv",
+  "eval_metrics_csv": "eval_metrics.csv",
+  "final_training_plots": [
+    "final_free_return_rates.png",
+    "final_mean_eval_dv.png",
+    "final_mean_eval_reward.png",
+    "final_ppo_metrics.png",
+    "final_training_curves.npz"
+  ],
+  "final_true5_rate": 0.0
+}

@@ -1,0 +1,1 @@
+{"tag": "no_lstm_mcc_seed1", "pid": 903468, "step": 602112, "target_step": 602112, "started_at": 1786105710.215861, "updated_at": 1786110042.3149548, "eval_reward": 88.010028, "eval_sr": 1.0, "extra": {"n_evals": "147", "mean_dv": 0.042927}}

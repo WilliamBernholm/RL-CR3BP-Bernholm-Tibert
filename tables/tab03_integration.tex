@@ -1,0 +1,22 @@
+\begin{table}[hbt!]
+\centering
+\caption{Integration accuracy against a DOP853 reference (rtol $=$ atol $=10^{-13}$) over a representative 10.4-day free return. The two columns are separate production code paths: the adaptive kernel propagates the agent's drift between decisions, while the ballistic scan propagates the post-injection free return that produces the reward. The adaptive substep policy never touches the ballistic scan.}
+\label{tab:integration}
+\footnotesize
+\begin{tabular}{lrr}
+\toprule
+Quantity & Adaptive kernel (drift) & Ballistic scan (reward) \\
+\midrule
+RMS position error & 31.47 km & 3.65 km \\
+Error at Earth-return perigee & 109.92 km & 12.82 km \\
+\quad as fraction of corridor width & 0.626\% & 0.073\% \\
+Error at perilune & 1.21 km & 0.14 km \\
+Substeps over the arc & 4,144 & 25,001 \\
+\midrule
+\multicolumn{3}{l}{\textit{Shared}} \\
+Observed convergence order & \multicolumn{2}{r}{4.36 to 4.08} \\
+Jacobi constant drift & \multicolumn{2}{r}{1.4e-05 (reference 3.3e-11)} \\
+DOP853 self-consistency & \multicolumn{2}{r}{1.5e-05 km} \\
+\bottomrule
+\end{tabular}
+\end{table}

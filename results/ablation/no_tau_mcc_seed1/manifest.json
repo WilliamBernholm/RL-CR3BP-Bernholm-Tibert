@@ -1,0 +1,70 @@
+{
+  "meta": {
+    "label": "no_tau_mcc",
+    "agent": "mcc",
+    "arm": "no_tau",
+    "trainer_mode": "ppo_b_library",
+    "source_txt": "configs/archived_txt/PPOB_2026-05-08_10-56-47_run_config.txt",
+    "source_sha256": "56f85b5f3bd10fd5e01aeefa7b99773a61ae4c948180ec4c769088fe3f5bdf8b",
+    "effective_total_steps": 602112,
+    "cr3bp_Lstar_km": 384400.0,
+    "cr3bp_Tstar_s": 375200.0,
+    "mu": 0.012150585609624,
+    "dv_scale": 0.02928199791883455,
+    "rp_min": 0.0143,
+    "rp_max": 0.06,
+    "r_moon_flyby": 0.06,
+    "r_earth_impact": 0.014,
+    "r_moon_impact": 0.0045,
+    "r_earth_return": 0.05,
+    "r_escape": 2.0,
+    "drift_min_minutes_pre_tli": 0.08333333333333333,
+    "drift_max_minutes_pre_tli": 1.0,
+    "drift_min_minutes_post_tli": 10.0,
+    "drift_max_minutes_post_tli": 3000.0,
+    "lstm_enabled": true,
+    "tau_action_enabled": false,
+    "time_aware_discount_enabled": true,
+    "fixed_drift_minutes": null,
+    "LU_km": 384400.0,
+    "TU_seconds": 375200.0,
+    "VU_kms": 1.0245202558635393
+  },
+  "n_snapshots": 147,
+  "step_range": [
+    4096,
+    602112
+  ],
+  "actions_npz_bytes": 122191,
+  "trajectories": {
+    "best": {
+      "step": 589824,
+      "file": "best_step000589824.npz",
+      "bytes": 162604
+    },
+    "final": {
+      "step": 589824,
+      "file": "final_step000589824.npz",
+      "bytes": 162604
+    },
+    "failure": {
+      "step": 589824,
+      "file": "failure_step000589824.npz",
+      "bytes": 162604
+    }
+  },
+  "policies": {
+    "FINAL": "policy_FINAL_PPOB__model_final__2026-08-07_12-53-17.zip"
+  },
+  "n_evals": 147,
+  "metrics_source": "eval_metrics.csv",
+  "eval_metrics_csv": "eval_metrics.csv",
+  "final_training_plots": [
+    "final_free_return_rates.png",
+    "final_mean_eval_dv.png",
+    "final_mean_eval_reward.png",
+    "final_ppo_metrics.png",
+    "final_training_curves.npz"
+  ],
+  "final_true5_rate": 0.0
+}

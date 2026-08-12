@@ -1,0 +1,20 @@
+% source: results/evaluation/sensitivity/TLI-noise_seed1000
+\begin{table}[hbt!]
+\centering
+\small
+\caption{TLI sensitivity validation. The reference is a fixed single impulse obtained by differential evolution, chosen to pass through the middle of both corridors; the \emph{initial state} is dispersed in position and velocity and the same dispersed state is given to both the policy and the fixed impulse, so the reference action itself is never perturbed. Dispersions are applied once, at the pre-injection parking-orbit state.}
+\label{tab:tli_sensitivity}
+\begin{tabular}{lrrrrrr}
+\toprule
+Case & $\sigma_r$ & $\sigma_v$ & $N$ & PPO & Nom. & $\Delta$ \\
+ & [m] & [m/s] & & [\%] & [\%] & [pp] \\
+\midrule
+Nominal & 0 & 0 & 500 & 0.0 & 100.0 & $-100.0$ \\
+Position only & 2000 & 0 & 500 & 0.0 & 34.8 & $-34.8$ \\
+Velocity only & 0 & 10 & 500 & 0.0 & 7.4 & $-7.4$ \\
+Position + velocity & 2000 & 10 & 500 & 0.0 & 4.8 & $-4.8$ \\
+\midrule
+Total & -- & -- & 2000 & 0.0 & 36.8 & $-36.8$ \\
+\bottomrule
+\end{tabular}
+\end{table}

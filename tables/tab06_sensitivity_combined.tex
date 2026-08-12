@@ -1,0 +1,28 @@
+% source mcc: results/evaluation/sensitivity/MCC-2_seed1000
+% source tli: results/evaluation/sensitivity/TLI-3_seed1000
+\begin{table}[hbt!]
+\centering
+\small
+\caption{Sensitivity validation for both agents. The reference is a fixed single impulse obtained by differential evolution, chosen to pass through the middle of both corridors. The \emph{initial state} is dispersed in position and velocity and the same dispersed state is given to both the policy and the fixed impulse, so the reference action itself is never perturbed. Dispersions are applied once, at the pre-injection parking-orbit state for PPO-TLI and at the handoff state for PPO-MCC.}
+\label{tab:sensitivity}
+\begin{tabular}{llrrrrrr}
+\toprule
+Agent & Case & $\sigma_r$ & $\sigma_v$ & $N$ & PPO & Nom. & $\Delta$ \\
+ & & [m] & [m/s] & & [\%] & [\%] & [pp] \\
+\midrule
+PPO-TLI & Nominal & 0 & 0 & 500 & 100.0 & 100.0 & +0.0 \\
+ & Position only & 2000 & 0 & 500 & 33.0 & 34.8 & $-1.8$ \\
+ & Velocity only & 0 & 10 & 500 & 5.4 & 7.4 & $-2.0$ \\
+ & Position + velocity & 2000 & 10 & 500 & 5.0 & 4.8 & +0.2 \\
+\cmidrule(l){2-8}
+ & Total & -- & -- & 2000 & 35.9 & 36.8 & $-0.9$ \\
+\midrule
+PPO-MCC & Nominal & 0 & 0 & 500 & 100.0 & 100.0 & +0.0 \\
+ & Position only & 2000 & 0 & 500 & 100.0 & 84.0 & +16.0 \\
+ & Velocity only & 0 & 10 & 500 & 19.8 & 20.8 & $-1.0$ \\
+ & Position + velocity & 2000 & 10 & 500 & 23.0 & 21.2 & +1.8 \\
+\cmidrule(l){2-8}
+ & Total & -- & -- & 2000 & 60.7 & 56.5 & +4.2 \\
+\bottomrule
+\end{tabular}
+\end{table}

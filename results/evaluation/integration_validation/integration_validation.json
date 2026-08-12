@@ -1,0 +1,178 @@
+{
+  "case": "case.npz",
+  "arc_days": 10.418470222227858,
+  "corridor_width_km": 17567.079999999998,
+  "reference": "DOP853 rtol=atol=1e-13",
+  "dop853_1e13_vs_1e14_km": 1.5134810495223684e-05,
+  "dop853_1e11_vs_1e14_km": 0.001506952103554299,
+  "lever1_adaptive_kernel": [
+    {
+      "fine_minutes": 2.0,
+      "rms_km": 577.7679045854576,
+      "err_max_km": 2022.6708545479712,
+      "err_end_km": 927.5843688102731,
+      "err_perilune_km": 21.805378015770632,
+      "err_perigee_km": 1986.277769502537,
+      "perigee_pct_of_corridor": 11.306818034087266,
+      "n_samples": 3431
+    },
+    {
+      "fine_minutes": 1.0,
+      "rms_km": 31.47006577068246,
+      "err_max_km": 110.5935328119686,
+      "err_end_km": 50.252652631535355,
+      "err_perilune_km": 1.207520844425828,
+      "err_perigee_km": 109.92275303366927,
+      "perigee_pct_of_corridor": 0.6257314991089542,
+      "n_samples": 4144
+    },
+    {
+      "fine_minutes": 0.5,
+      "rms_km": 2.6871862104214017,
+      "err_max_km": 9.414097975064116,
+      "err_end_km": 4.2702825767327885,
+      "err_perilune_km": 0.0989214521502969,
+      "err_perigee_km": 9.344393273989077,
+      "perigee_pct_of_corridor": 0.053192638013768244,
+      "n_samples": 5572
+    },
+    {
+      "fine_minutes": 0.25,
+      "rms_km": 1.0622216787499381,
+      "err_max_km": 3.709910681025244,
+      "err_end_km": 1.6749204336226469,
+      "err_perilune_km": 0.035621518278013325,
+      "err_perigee_km": 3.6861803244808016,
+      "perigee_pct_of_corridor": 0.020983454987856844,
+      "n_samples": 8428
+    },
+    {
+      "fine_minutes": 0.125,
+      "rms_km": 0.9735522073700313,
+      "err_max_km": 3.3865051869793645,
+      "err_end_km": 1.5274607568613208,
+      "err_perilune_km": 0.03196624348104744,
+      "err_perigee_km": 3.364900246757152,
+      "perigee_pct_of_corridor": 0.01915457917170726,
+      "n_samples": 14139
+    }
+  ],
+  "lever1_production": {
+    "fine_minutes": 1.0,
+    "rms_km": 31.47006577068246,
+    "err_max_km": 110.5935328119686,
+    "err_end_km": 50.252652631535355,
+    "err_perilune_km": 1.207520844425828,
+    "err_perigee_km": 109.92275303366927,
+    "perigee_pct_of_corridor": 0.6257314991089542,
+    "n_samples": 4144
+  },
+  "lever2_ballistic_scan": [
+    {
+      "integration_substeps": 25,
+      "dt_sub_s": 72.0384,
+      "rms_km": 65.28374319823136,
+      "err_max_km": 230.82844103257167,
+      "err_end_km": 104.92444639371993,
+      "err_perilune_km": 2.5102727340722275,
+      "err_perigee_km": 229.02231353053554,
+      "perigee_pct_of_corridor": 1.303701659755267,
+      "n_samples": 12501
+    },
+    {
+      "integration_substeps": 50,
+      "dt_sub_s": 36.0192,
+      "rms_km": 3.6523769749220207,
+      "err_max_km": 12.911155149331014,
+      "err_end_km": 5.8717979064621435,
+      "err_perilune_km": 0.1433176662560082,
+      "err_perigee_km": 12.818050639652322,
+      "perigee_pct_of_corridor": 0.07296631335231765,
+      "n_samples": 25001
+    },
+    {
+      "integration_substeps": 100,
+      "dt_sub_s": 18.0096,
+      "rms_km": 0.2150657882429777,
+      "err_max_km": 0.7597660911451946,
+      "err_end_km": 0.3458584040252714,
+      "err_perilune_km": 0.00848787926271025,
+      "err_perigee_km": 0.7543076957501026,
+      "perigee_pct_of_corridor": 0.0042938706703111885,
+      "n_samples": 50001
+    },
+    {
+      "integration_substeps": 200,
+      "dt_sub_s": 9.0048,
+      "rms_km": 0.013042427761484064,
+      "err_max_km": 0.046058630785388986,
+      "err_end_km": 0.020977853446983174,
+      "err_perilune_km": 0.0005169109953492378,
+      "err_perigee_km": 0.04575133771442381,
+      "perigee_pct_of_corridor": 0.0002604379197591394,
+      "n_samples": 100001
+    },
+    {
+      "integration_substeps": 400,
+      "dt_sub_s": 4.5024,
+      "rms_km": 0.00081398256081699,
+      "err_max_km": 0.0028740290374996706,
+      "err_end_km": 0.0013094514713434394,
+      "err_perilune_km": 3.225333669443402e-05,
+      "err_perigee_km": 0.0028548476913415714,
+      "perigee_pct_of_corridor": 1.6251122504944317e-05,
+      "n_samples": 200001
+    }
+  ],
+  "lever2_production": {
+    "integration_substeps": 50,
+    "dt_sub_s": 36.0192,
+    "rms_km": 3.6523769749220207,
+    "err_max_km": 12.911155149331014,
+    "err_end_km": 5.8717979064621435,
+    "err_perilune_km": 0.1433176662560082,
+    "err_perigee_km": 12.818050639652322,
+    "perigee_pct_of_corridor": 0.07296631335231765,
+    "n_samples": 25001
+  },
+  "convergence": {
+    "ladder": [
+      {
+        "n": 400,
+        "err_km": 14860.967914123588
+      },
+      {
+        "n": 800,
+        "err_km": 724.1503161011028
+      },
+      {
+        "n": 1600,
+        "err_km": 34.862835748919046
+      },
+      {
+        "n": 3200,
+        "err_km": 1.8311168020314987
+      },
+      {
+        "n": 6400,
+        "err_km": 0.10352675050178319
+      },
+      {
+        "n": 12800,
+        "err_km": 0.00613070926983242
+      }
+    ],
+    "orders": [
+      4.359095076300459,
+      4.376527368604772,
+      4.250894198461768,
+      4.144648317608534,
+      4.07780579591105
+    ],
+    "order_confirmed": true
+  },
+  "jacobi_drift_rk4": 1.378784246552911e-05,
+  "jacobi_drift_reference": 3.289812866569264e-11,
+  "jacobi_measured_on": "lever1_adaptive_kernel",
+  "runtime_s": 8.59
+}

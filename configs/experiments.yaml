@@ -1,0 +1,607 @@
+# MASTER RUN QUEUE -- the manifest of record.
+# Regenerate with `make queue`. Do not hand-edit.
+version: 1
+seeds:
+- 1000
+- 0
+- 1
+n_runs: 63
+n_sensitivity: 12
+notes:
+  dedupe: 'The ablation ''Full method'' arm is NOT a separate run: --mode baseline is the headline TLI-3
+    / MCC-2 curriculum. Table 4''s Full-method row is sourced from the headline runs.'
+  sweep: Every tausweep_* row is a no_tau run at a constant drift. The sweep is the no-tau arm, not an
+    independent experiment.
+  noise: 'The *-noise rows are the only runs with dispersion on: a single per-episode Gaussian perturbation
+    of the initial state, 1-sigma 33.33 km / 0.333 m/s at full ramp, one order of magnitude below LaFarge
+    et al. 2021. Execution noise is excluded.'
+  sensitivity: Frozen-policy dispersion sweeps, not training runs. Clean-trained and noise-trained, so
+    the four cells of trained-clean/noise x evaluated-nominal/dispersed are all populated. Requires `make
+    pack` first.
+runs:
+- tag: MCC-1_seed1000
+  block: headline
+  config: configs/headline/MCC-1.yaml
+  agent: mcc
+  arm: none
+  seed: 1000
+  out_dir: results/headline/MCC-1_seed1000
+- tag: MCC-1_seed0
+  block: headline
+  config: configs/headline/MCC-1.yaml
+  agent: mcc
+  arm: none
+  seed: 0
+  out_dir: results/headline/MCC-1_seed0
+- tag: MCC-1_seed1
+  block: headline
+  config: configs/headline/MCC-1.yaml
+  agent: mcc
+  arm: none
+  seed: 1
+  out_dir: results/headline/MCC-1_seed1
+- tag: MCC-2_seed1000
+  block: headline
+  config: configs/headline/MCC-2.yaml
+  agent: mcc
+  arm: none
+  seed: 1000
+  out_dir: results/headline/MCC-2_seed1000
+  note: doubles as the ablation 'Full method' arm
+- tag: MCC-2_seed0
+  block: headline
+  config: configs/headline/MCC-2.yaml
+  agent: mcc
+  arm: none
+  seed: 0
+  out_dir: results/headline/MCC-2_seed0
+  note: doubles as the ablation 'Full method' arm
+- tag: MCC-2_seed1
+  block: headline
+  config: configs/headline/MCC-2.yaml
+  agent: mcc
+  arm: none
+  seed: 1
+  out_dir: results/headline/MCC-2_seed1
+  note: doubles as the ablation 'Full method' arm
+- tag: MCC-3_seed1000
+  block: headline
+  config: configs/headline/MCC-3.yaml
+  agent: mcc
+  arm: none
+  seed: 1000
+  out_dir: results/headline/MCC-3_seed1000
+- tag: MCC-3_seed0
+  block: headline
+  config: configs/headline/MCC-3.yaml
+  agent: mcc
+  arm: none
+  seed: 0
+  out_dir: results/headline/MCC-3_seed0
+- tag: MCC-3_seed1
+  block: headline
+  config: configs/headline/MCC-3.yaml
+  agent: mcc
+  arm: none
+  seed: 1
+  out_dir: results/headline/MCC-3_seed1
+- tag: MCC-4_seed1000
+  block: headline
+  config: configs/headline/MCC-4.yaml
+  agent: mcc
+  arm: none
+  seed: 1000
+  out_dir: results/headline/MCC-4_seed1000
+- tag: MCC-4_seed0
+  block: headline
+  config: configs/headline/MCC-4.yaml
+  agent: mcc
+  arm: none
+  seed: 0
+  out_dir: results/headline/MCC-4_seed0
+- tag: MCC-4_seed1
+  block: headline
+  config: configs/headline/MCC-4.yaml
+  agent: mcc
+  arm: none
+  seed: 1
+  out_dir: results/headline/MCC-4_seed1
+- tag: MCC-5_seed1000
+  block: headline
+  config: configs/headline/MCC-5.yaml
+  agent: mcc
+  arm: none
+  seed: 1000
+  out_dir: results/headline/MCC-5_seed1000
+- tag: MCC-5_seed0
+  block: headline
+  config: configs/headline/MCC-5.yaml
+  agent: mcc
+  arm: none
+  seed: 0
+  out_dir: results/headline/MCC-5_seed0
+- tag: MCC-5_seed1
+  block: headline
+  config: configs/headline/MCC-5.yaml
+  agent: mcc
+  arm: none
+  seed: 1
+  out_dir: results/headline/MCC-5_seed1
+- tag: MCC-6_seed1000
+  block: headline
+  config: configs/headline/MCC-6.yaml
+  agent: mcc
+  arm: none
+  seed: 1000
+  out_dir: results/headline/MCC-6_seed1000
+- tag: MCC-6_seed0
+  block: headline
+  config: configs/headline/MCC-6.yaml
+  agent: mcc
+  arm: none
+  seed: 0
+  out_dir: results/headline/MCC-6_seed0
+- tag: MCC-6_seed1
+  block: headline
+  config: configs/headline/MCC-6.yaml
+  agent: mcc
+  arm: none
+  seed: 1
+  out_dir: results/headline/MCC-6_seed1
+- tag: TLI-1_seed1000
+  block: headline
+  config: configs/headline/TLI-1.yaml
+  agent: tli
+  arm: none
+  seed: 1000
+  out_dir: results/headline/TLI-1_seed1000
+- tag: TLI-1_seed0
+  block: headline
+  config: configs/headline/TLI-1.yaml
+  agent: tli
+  arm: none
+  seed: 0
+  out_dir: results/headline/TLI-1_seed0
+- tag: TLI-1_seed1
+  block: headline
+  config: configs/headline/TLI-1.yaml
+  agent: tli
+  arm: none
+  seed: 1
+  out_dir: results/headline/TLI-1_seed1
+- tag: TLI-2_seed1000
+  block: headline
+  config: configs/headline/TLI-2.yaml
+  agent: tli
+  arm: none
+  seed: 1000
+  out_dir: results/headline/TLI-2_seed1000
+- tag: TLI-2_seed0
+  block: headline
+  config: configs/headline/TLI-2.yaml
+  agent: tli
+  arm: none
+  seed: 0
+  out_dir: results/headline/TLI-2_seed0
+- tag: TLI-2_seed1
+  block: headline
+  config: configs/headline/TLI-2.yaml
+  agent: tli
+  arm: none
+  seed: 1
+  out_dir: results/headline/TLI-2_seed1
+- tag: TLI-3_seed1000
+  block: headline
+  config: configs/headline/TLI-3.yaml
+  agent: tli
+  arm: none
+  seed: 1000
+  out_dir: results/headline/TLI-3_seed1000
+  note: doubles as the ablation 'Full method' arm
+- tag: TLI-3_seed0
+  block: headline
+  config: configs/headline/TLI-3.yaml
+  agent: tli
+  arm: none
+  seed: 0
+  out_dir: results/headline/TLI-3_seed0
+  note: doubles as the ablation 'Full method' arm
+- tag: TLI-3_seed1
+  block: headline
+  config: configs/headline/TLI-3.yaml
+  agent: tli
+  arm: none
+  seed: 1
+  out_dir: results/headline/TLI-3_seed1
+  note: doubles as the ablation 'Full method' arm
+- tag: TLI-4_seed1000
+  block: headline
+  config: configs/headline/TLI-4.yaml
+  agent: tli
+  arm: none
+  seed: 1000
+  out_dir: results/headline/TLI-4_seed1000
+- tag: TLI-4_seed0
+  block: headline
+  config: configs/headline/TLI-4.yaml
+  agent: tli
+  arm: none
+  seed: 0
+  out_dir: results/headline/TLI-4_seed0
+- tag: TLI-4_seed1
+  block: headline
+  config: configs/headline/TLI-4.yaml
+  agent: tli
+  arm: none
+  seed: 1
+  out_dir: results/headline/TLI-4_seed1
+- tag: no_lstm_mcc_seed1000
+  block: ablation
+  config: configs/ablation/no_lstm_mcc.yaml
+  agent: mcc
+  arm: no_lstm
+  seed: 1000
+  out_dir: results/ablation/no_lstm_mcc_seed1000
+  note: derived from MCC-2
+- tag: no_lstm_mcc_seed0
+  block: ablation
+  config: configs/ablation/no_lstm_mcc.yaml
+  agent: mcc
+  arm: no_lstm
+  seed: 0
+  out_dir: results/ablation/no_lstm_mcc_seed0
+  note: derived from MCC-2
+- tag: no_lstm_mcc_seed1
+  block: ablation
+  config: configs/ablation/no_lstm_mcc.yaml
+  agent: mcc
+  arm: no_lstm
+  seed: 1
+  out_dir: results/ablation/no_lstm_mcc_seed1
+  note: derived from MCC-2
+- tag: no_time_discount_mcc_seed1000
+  block: ablation
+  config: configs/ablation/no_time_discount_mcc.yaml
+  agent: mcc
+  arm: no_time_discount
+  seed: 1000
+  out_dir: results/ablation/no_time_discount_mcc_seed1000
+  note: derived from MCC-2
+- tag: no_time_discount_mcc_seed0
+  block: ablation
+  config: configs/ablation/no_time_discount_mcc.yaml
+  agent: mcc
+  arm: no_time_discount
+  seed: 0
+  out_dir: results/ablation/no_time_discount_mcc_seed0
+  note: derived from MCC-2
+- tag: no_time_discount_mcc_seed1
+  block: ablation
+  config: configs/ablation/no_time_discount_mcc.yaml
+  agent: mcc
+  arm: no_time_discount
+  seed: 1
+  out_dir: results/ablation/no_time_discount_mcc_seed1
+  note: derived from MCC-2
+- tag: no_tau_mcc_seed1000
+  block: ablation
+  config: configs/ablation/no_tau_mcc.yaml
+  agent: mcc
+  arm: no_tau
+  seed: 1000
+  out_dir: results/ablation/no_tau_mcc_seed1000
+  note: derived from MCC-2
+- tag: no_tau_mcc_seed0
+  block: ablation
+  config: configs/ablation/no_tau_mcc.yaml
+  agent: mcc
+  arm: no_tau
+  seed: 0
+  out_dir: results/ablation/no_tau_mcc_seed0
+  note: derived from MCC-2
+- tag: no_tau_mcc_seed1
+  block: ablation
+  config: configs/ablation/no_tau_mcc.yaml
+  agent: mcc
+  arm: no_tau
+  seed: 1
+  out_dir: results/ablation/no_tau_mcc_seed1
+  note: derived from MCC-2
+- tag: no_lstm_tli_seed1000
+  block: ablation
+  config: configs/ablation/no_lstm_tli.yaml
+  agent: tli
+  arm: no_lstm
+  seed: 1000
+  out_dir: results/ablation/no_lstm_tli_seed1000
+  note: derived from TLI-3
+- tag: no_lstm_tli_seed0
+  block: ablation
+  config: configs/ablation/no_lstm_tli.yaml
+  agent: tli
+  arm: no_lstm
+  seed: 0
+  out_dir: results/ablation/no_lstm_tli_seed0
+  note: derived from TLI-3
+- tag: no_lstm_tli_seed1
+  block: ablation
+  config: configs/ablation/no_lstm_tli.yaml
+  agent: tli
+  arm: no_lstm
+  seed: 1
+  out_dir: results/ablation/no_lstm_tli_seed1
+  note: derived from TLI-3
+- tag: no_time_discount_tli_seed1000
+  block: ablation
+  config: configs/ablation/no_time_discount_tli.yaml
+  agent: tli
+  arm: no_time_discount
+  seed: 1000
+  out_dir: results/ablation/no_time_discount_tli_seed1000
+  note: derived from TLI-3
+- tag: no_time_discount_tli_seed0
+  block: ablation
+  config: configs/ablation/no_time_discount_tli.yaml
+  agent: tli
+  arm: no_time_discount
+  seed: 0
+  out_dir: results/ablation/no_time_discount_tli_seed0
+  note: derived from TLI-3
+- tag: no_time_discount_tli_seed1
+  block: ablation
+  config: configs/ablation/no_time_discount_tli.yaml
+  agent: tli
+  arm: no_time_discount
+  seed: 1
+  out_dir: results/ablation/no_time_discount_tli_seed1
+  note: derived from TLI-3
+- tag: no_tau_tli_seed1000
+  block: ablation
+  config: configs/ablation/no_tau_tli.yaml
+  agent: tli
+  arm: no_tau
+  seed: 1000
+  out_dir: results/ablation/no_tau_tli_seed1000
+  note: derived from TLI-3
+- tag: no_tau_tli_seed0
+  block: ablation
+  config: configs/ablation/no_tau_tli.yaml
+  agent: tli
+  arm: no_tau
+  seed: 0
+  out_dir: results/ablation/no_tau_tli_seed0
+  note: derived from TLI-3
+- tag: no_tau_tli_seed1
+  block: ablation
+  config: configs/ablation/no_tau_tli.yaml
+  agent: tli
+  arm: no_tau
+  seed: 1
+  out_dir: results/ablation/no_tau_tli_seed1
+  note: derived from TLI-3
+- tag: tausweep_mcc_d10_seed1000
+  block: ablation
+  config: configs/ablation/tausweep_mcc_d10.yaml
+  agent: mcc
+  arm: no_tau
+  seed: 1000
+  out_dir: results/ablation/tausweep_mcc_d10_seed1000
+  drift_minutes: 10.0
+  note: sweep point; the sweep IS the no_tau arm at 10 min
+- tag: tausweep_mcc_d60_seed1000
+  block: ablation
+  config: configs/ablation/tausweep_mcc_d60.yaml
+  agent: mcc
+  arm: no_tau
+  seed: 1000
+  out_dir: results/ablation/tausweep_mcc_d60_seed1000
+  drift_minutes: 60.0
+  note: sweep point; the sweep IS the no_tau arm at 60 min
+- tag: tausweep_mcc_d1000_seed1000
+  block: ablation
+  config: configs/ablation/tausweep_mcc_d1000.yaml
+  agent: mcc
+  arm: no_tau
+  seed: 1000
+  out_dir: results/ablation/tausweep_mcc_d1000_seed1000
+  drift_minutes: 1000.0
+  note: sweep point; the sweep IS the no_tau arm at 1000 min
+- tag: tausweep_mcc_d3000_seed1000
+  block: ablation
+  config: configs/ablation/tausweep_mcc_d3000.yaml
+  agent: mcc
+  arm: no_tau
+  seed: 1000
+  out_dir: results/ablation/tausweep_mcc_d3000_seed1000
+  drift_minutes: 3000.0
+  note: sweep point; the sweep IS the no_tau arm at 3000 min
+- tag: tausweep_tli_d0.083_seed1000
+  block: ablation
+  config: configs/ablation/tausweep_tli_d0.083.yaml
+  agent: tli
+  arm: no_tau
+  seed: 1000
+  out_dir: results/ablation/tausweep_tli_d0.083_seed1000
+  drift_minutes: 0.083
+  note: sweep point; the sweep IS the no_tau arm at 0.083 min
+- tag: tausweep_tli_d0.2_seed1000
+  block: ablation
+  config: configs/ablation/tausweep_tli_d0.2.yaml
+  agent: tli
+  arm: no_tau
+  seed: 1000
+  out_dir: results/ablation/tausweep_tli_d0.2_seed1000
+  drift_minutes: 0.2
+  note: sweep point; the sweep IS the no_tau arm at 0.2 min
+- tag: tausweep_tli_d0.65_seed1000
+  block: ablation
+  config: configs/ablation/tausweep_tli_d0.65.yaml
+  agent: tli
+  arm: no_tau
+  seed: 1000
+  out_dir: results/ablation/tausweep_tli_d0.65_seed1000
+  drift_minutes: 0.65
+  note: sweep point; the sweep IS the no_tau arm at 0.65 min
+- tag: tausweep_tli_d0.7_seed1000
+  block: ablation
+  config: configs/ablation/tausweep_tli_d0.7.yaml
+  agent: tli
+  arm: no_tau
+  seed: 1000
+  out_dir: results/ablation/tausweep_tli_d0.7_seed1000
+  drift_minutes: 0.7
+  note: sweep point; the sweep IS the no_tau arm at 0.7 min
+- tag: tausweep_tli_d1_seed1000
+  block: ablation
+  config: configs/ablation/tausweep_tli_d1.yaml
+  agent: tli
+  arm: no_tau
+  seed: 1000
+  out_dir: results/ablation/tausweep_tli_d1_seed1000
+  drift_minutes: 1.0
+  note: sweep point; the sweep IS the no_tau arm at 1 min
+- tag: MCC-noise_seed1000
+  block: noise
+  config: configs/noise/MCC-noise.yaml
+  agent: mcc
+  arm: none
+  seed: 1000
+  out_dir: results/noise/MCC-noise_seed1000
+  note: appendix robustness probe; the ONLY runs with dispersion on
+- tag: MCC-noise_seed0
+  block: noise
+  config: configs/noise/MCC-noise.yaml
+  agent: mcc
+  arm: none
+  seed: 0
+  out_dir: results/noise/MCC-noise_seed0
+  note: appendix robustness probe; the ONLY runs with dispersion on
+- tag: MCC-noise_seed1
+  block: noise
+  config: configs/noise/MCC-noise.yaml
+  agent: mcc
+  arm: none
+  seed: 1
+  out_dir: results/noise/MCC-noise_seed1
+  note: appendix robustness probe; the ONLY runs with dispersion on
+- tag: TLI-noise_seed1000
+  block: noise
+  config: configs/noise/TLI-noise.yaml
+  agent: tli
+  arm: none
+  seed: 1000
+  out_dir: results/noise/TLI-noise_seed1000
+  note: appendix robustness probe; the ONLY runs with dispersion on
+- tag: TLI-noise_seed0
+  block: noise
+  config: configs/noise/TLI-noise.yaml
+  agent: tli
+  arm: none
+  seed: 0
+  out_dir: results/noise/TLI-noise_seed0
+  note: appendix robustness probe; the ONLY runs with dispersion on
+- tag: TLI-noise_seed1
+  block: noise
+  config: configs/noise/TLI-noise.yaml
+  agent: tli
+  arm: none
+  seed: 1
+  out_dir: results/noise/TLI-noise_seed1
+  note: appendix robustness probe; the ONLY runs with dispersion on
+sensitivity:
+- tag: TLI-3_seed1000
+  label: TLI-3
+  agent: tli
+  seed: 1000
+  config: configs/headline/TLI-3.yaml
+  policy_from: results/headline/TLI-3_seed1000
+  out_dir: results/evaluation/sensitivity/TLI-3_seed1000
+  trained_with_noise: false
+- tag: TLI-3_seed0
+  label: TLI-3
+  agent: tli
+  seed: 0
+  config: configs/headline/TLI-3.yaml
+  policy_from: results/headline/TLI-3_seed0
+  out_dir: results/evaluation/sensitivity/TLI-3_seed0
+  trained_with_noise: false
+- tag: TLI-3_seed1
+  label: TLI-3
+  agent: tli
+  seed: 1
+  config: configs/headline/TLI-3.yaml
+  policy_from: results/headline/TLI-3_seed1
+  out_dir: results/evaluation/sensitivity/TLI-3_seed1
+  trained_with_noise: false
+- tag: MCC-2_seed1000
+  label: MCC-2
+  agent: mcc
+  seed: 1000
+  config: configs/headline/MCC-2.yaml
+  policy_from: results/headline/MCC-2_seed1000
+  out_dir: results/evaluation/sensitivity/MCC-2_seed1000
+  trained_with_noise: false
+- tag: MCC-2_seed0
+  label: MCC-2
+  agent: mcc
+  seed: 0
+  config: configs/headline/MCC-2.yaml
+  policy_from: results/headline/MCC-2_seed0
+  out_dir: results/evaluation/sensitivity/MCC-2_seed0
+  trained_with_noise: false
+- tag: MCC-2_seed1
+  label: MCC-2
+  agent: mcc
+  seed: 1
+  config: configs/headline/MCC-2.yaml
+  policy_from: results/headline/MCC-2_seed1
+  out_dir: results/evaluation/sensitivity/MCC-2_seed1
+  trained_with_noise: false
+- tag: TLI-noise_seed1000
+  label: TLI-noise
+  agent: tli
+  seed: 1000
+  config: configs/noise/TLI-noise.yaml
+  policy_from: results/noise/TLI-noise_seed1000
+  out_dir: results/evaluation/sensitivity/TLI-noise_seed1000
+  trained_with_noise: true
+- tag: TLI-noise_seed0
+  label: TLI-noise
+  agent: tli
+  seed: 0
+  config: configs/noise/TLI-noise.yaml
+  policy_from: results/noise/TLI-noise_seed0
+  out_dir: results/evaluation/sensitivity/TLI-noise_seed0
+  trained_with_noise: true
+- tag: TLI-noise_seed1
+  label: TLI-noise
+  agent: tli
+  seed: 1
+  config: configs/noise/TLI-noise.yaml
+  policy_from: results/noise/TLI-noise_seed1
+  out_dir: results/evaluation/sensitivity/TLI-noise_seed1
+  trained_with_noise: true
+- tag: MCC-noise_seed1000
+  label: MCC-noise
+  agent: mcc
+  seed: 1000
+  config: configs/noise/MCC-noise.yaml
+  policy_from: results/noise/MCC-noise_seed1000
+  out_dir: results/evaluation/sensitivity/MCC-noise_seed1000
+  trained_with_noise: true
+- tag: MCC-noise_seed0
+  label: MCC-noise
+  agent: mcc
+  seed: 0
+  config: configs/noise/MCC-noise.yaml
+  policy_from: results/noise/MCC-noise_seed0
+  out_dir: results/evaluation/sensitivity/MCC-noise_seed0
+  trained_with_noise: true
+- tag: MCC-noise_seed1
+  label: MCC-noise
+  agent: mcc
+  seed: 1
+  config: configs/noise/MCC-noise.yaml
+  policy_from: results/noise/MCC-noise_seed1
+  out_dir: results/evaluation/sensitivity/MCC-noise_seed1
+  trained_with_noise: true

@@ -1,0 +1,1 @@
+{"tag": "TLI-1_seed1000", "pid": 882632, "step": 659456, "target_step": 659456, "started_at": 1786094842.9833503, "updated_at": 1786098121.816533, "eval_reward": 160.375317, "eval_sr": 0.0, "extra": {"n_evals": "161", "mean_dv": 3.123413}}

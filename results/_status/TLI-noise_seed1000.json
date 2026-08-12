@@ -1,0 +1,1 @@
+{"tag": "TLI-noise_seed1000", "pid": 888053, "step": 798720, "target_step": 800768, "started_at": 1786097346.2324889, "updated_at": 1786100702.1782684, "eval_reward": 22.005948, "eval_sr": 0.0625, "extra": {"n_evals": "195", "mean_dv": 3.123413}}

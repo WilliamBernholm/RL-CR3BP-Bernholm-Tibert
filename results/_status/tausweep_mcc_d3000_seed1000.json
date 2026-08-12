@@ -1,0 +1,1 @@
+{"tag": "tausweep_mcc_d3000_seed1000", "pid": 903472, "step": 602112, "target_step": 602112, "started_at": 1786105710.268562, "updated_at": 1786110323.5201638, "eval_reward": 84.830108, "eval_sr": 1.0, "extra": {"n_evals": "147", "mean_dv": 0.049135}}

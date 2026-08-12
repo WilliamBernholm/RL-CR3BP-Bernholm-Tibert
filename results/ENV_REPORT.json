@@ -1,0 +1,17 @@
+{
+  "started_at": "2026-08-07T14:28:27",
+  "workers": 56,
+  "n_jobs": 25,
+  "cpu_count": 64,
+  "platform": "Linux-6.8.0-52-generic-x86_64-with-glibc2.35",
+  "processor": "x86_64",
+  "python": "3.10.19",
+  "executable": "/home/masterstudent/miniconda3/envs/ppo_cr3bp/bin/python",
+  "git_commit": "",
+  "git_dirty": false,
+  "version_torch": "2.10.0",
+  "version_numpy": "2.2.6",
+  "version_numba": "0.66.0",
+  "version_stable_baselines3": "2.7.1",
+  "version_gymnasium": "1.2.3"
+}

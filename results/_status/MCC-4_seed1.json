@@ -1,0 +1,1 @@
+{"tag": "MCC-4_seed1", "pid": 903462, "step": 602112, "target_step": 602112, "started_at": 1786105710.2690458, "updated_at": 1786110112.730177, "eval_reward": 59.670064, "eval_sr": 0.0, "extra": {"n_evals": "147", "mean_dv": 0.029475}}

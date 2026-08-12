@@ -1,0 +1,1 @@
+{"tag": "MCC-3_seed1", "pid": 903459, "step": 602112, "target_step": 602112, "started_at": 1786105710.3389995, "updated_at": 1786110275.34516, "eval_reward": 64.738438, "eval_sr": 1.0, "extra": {"n_evals": "147", "mean_dv": 0.037867}}

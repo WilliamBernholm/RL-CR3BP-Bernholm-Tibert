@@ -1,0 +1,20 @@
+% source: results/evaluation/sensitivity/MCC-2_seed0
+\begin{table}[hbt!]
+\centering
+\small
+\caption{MCC sensitivity validation, with the same protocol as Table~\ref{tab:tli_sensitivity}: a fixed differential-evolution single impulse as reference, the initial state dispersed, and the reference action held constant.}
+\label{tab:mcc_sensitivity}
+\begin{tabular}{lrrrrrr}
+\toprule
+Case & $\sigma_r$ & $\sigma_v$ & $N$ & PPO & Nom. & $\Delta$ \\
+ & [m] & [m/s] & & [\%] & [\%] & [pp] \\
+\midrule
+Nominal & 0 & 0 & 500 & 100.0 & 100.0 & +0.0 \\
+Position only & 2000 & 0 & 500 & 100.0 & 84.0 & +16.0 \\
+Velocity only & 0 & 10 & 500 & 19.8 & 20.8 & $-1.0$ \\
+Position + velocity & 2000 & 10 & 500 & 23.0 & 21.2 & +1.8 \\
+\midrule
+Total & -- & -- & 2000 & 60.7 & 56.5 & +4.2 \\
+\bottomrule
+\end{tabular}
+\end{table}
