@@ -240,9 +240,18 @@ _ACTION_PANEL_FONTS: Dict[str, Any] = {
     "annotation.size": 10,
 }
 
+#: 2026-08-13: the four training curves are tiled into one 2x2 float in the
+#: manuscript, and that page is short of vertical space. 5 % off the height, at the
+#: same column width: 2.9/5.2 = 0.5577 -> 0.5298. Nothing else about them changes.
+_TRAINING_CURVE_SHORTER = dict(aspect=0.5298)
+
 FIGURE_OVERRIDES: Dict[str, Dict[str, Any]] = {
     "tau_usage_tli": dict(_ACTION_PANEL_FONTS),
     "tau_usage_mcc": dict(_ACTION_PANEL_FONTS),
+    "ppo_tli_dv_curve": dict(_TRAINING_CURVE_SHORTER),
+    "ppo_tli_reward_curve": dict(_TRAINING_CURVE_SHORTER),
+    "ppo_mcc_dv_curve": dict(_TRAINING_CURVE_SHORTER),
+    "ppo_mcc_reward_curve": dict(_TRAINING_CURVE_SHORTER),
 }
 
 #: Override keys that are ours rather than matplotlib's. `annotation.size` is ours

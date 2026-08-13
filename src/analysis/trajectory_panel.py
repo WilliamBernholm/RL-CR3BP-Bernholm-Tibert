@@ -153,7 +153,10 @@ ARC_LABELS = {
 #: are read off one scale. The x range stays data-driven, and the aspect stays EQUAL
 #: -- a rotating-frame trajectory on unequal axes is a different shape, not a
 #: rescaled one -- so the axes box is what gives, via `adjustable="box"`.
-TRAJ_YLIM = (-0.42, 0.42)
+#: 2026-08-13: tightened from (-0.42, 0.42). The four panels are tiled into one float
+#: and that page is short of vertical space; the extreme of the plotted set is
+#: y = +0.37, so nothing is clipped and each panel loses ~5 % of its height.
+TRAJ_YLIM = (-0.40, 0.40)
 
 
 def burn_arrows(agent: str, burn_pos_rot: np.ndarray, burn_dv_vec_rot: np.ndarray,
