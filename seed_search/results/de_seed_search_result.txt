@@ -1,0 +1,56 @@
+==============================================================================
+DIFFERENTIAL-EVOLUTION SEED SEARCH  --  RESULT
+==============================================================================
+
+Search space (identical to the 81 x 41 x 11 uniform grid it replaces)
+  phase angle phi   : [105.0, 145.0] deg
+  TLI magnitude dv  : [3.020, 3.220] km/s
+  direction alpha   : [-5.0, 5.0] deg from local prograde
+
+Requirement: minimise dv subject to the FULL success corridors
+  lunar flyby  : r_M,min <= 0.060000   (23064 km)   [success band 0.0600]
+  Earth return : r_p in [0.014300, 0.060000]   (5497 to 23064 km)   [success band 0.0143 to 0.0600]
+
+------------------------------------------------------------------------------
+SOLUTION
+------------------------------------------------------------------------------
+  phi    = 114.902403 deg
+  dv_TLI = 3.086496 km/s   (3086.50 m/s)
+  alpha  = -0.000449 deg
+
+  feasible in the middle half of both corridors : True
+
+  Lunar flyby
+    closest approach   : 0.027778 nondim = 10677.9 km from Moon centre
+    perilune altitude  : 8940.5 km
+    time of flyby      : 4.6694 d
+    margin to the full success band : 53.7 %
+
+  Earth return
+    post-flyby perigee : 0.059459 nondim = 22856.1 km from Earth centre
+    perigee altitude   : 16477.9 km
+    time of perigee    : 8.2307 d
+    margin to the band edge : 2.4 % of the half-width
+
+  no Earth impact / no Moon impact / no escape : True / True / True
+
+------------------------------------------------------------------------------
+STEP-SIZE CONVERGENCE OF THE REPORTED SOLUTION
+------------------------------------------------------------------------------
+    step (min)   r_M,min (km)     r_p (km)   feasible
+          1.00        10673.9      22871.8       True
+          0.50        10677.7      22856.9       True
+          0.25        10677.9      22856.1       True
+
+------------------------------------------------------------------------------
+PROVENANCE
+------------------------------------------------------------------------------
+  propagation horizon : t_max = 2.4 nondim = 10.422 d (the manuscript's own limit)
+  analytical patched-conic seed : dv 3.082052 km/s, phi 114.358 deg, TOF 4.982 d
+  integrator kernel vs cr3bp_env_v4.rk4_step, max |diff| over 500 steps : 7.550e-15
+  feasibility margin required of the search : 0.000500 nondim (192 km); the result above is scored with NO margin
+  differential evolution : popsize 40, maxiter 300, tol 1e-08, seed 20260813, polish True
+  objective evaluations : 7340
+  wall clock : 45.3 s
+  python 3.10.11 on Windows-10-10.0.26200-SP0
+==============================================================================
